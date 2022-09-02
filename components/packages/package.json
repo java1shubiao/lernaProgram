@@ -1,0 +1,23 @@
+{
+  "name": "@xiaoe/uni-ui",
+  "version": "1.0.16",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "main": "./index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://talkcheap.xiaoeknow.com/helpstudy/e_uni_monorepo_fe.git"
+  },
+  "browserslist": [
+    "Android >= 4",
+    "ios >= 8"
+  ],
+  "dependencies": {
+    "@types/uni-app": "^1.4.4",
+    "async-validator": "^4.0.7",
+    "vue": "^3.2.31",
+    "lodash-es": "^4.17.21"
+  },
+  "gitHead": "222af5f6bae4b8b7475fee69150feb49d404d0d7"
+}

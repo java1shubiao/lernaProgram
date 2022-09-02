@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": ["esnext", "dom"],
+    "types": ["@types/uni-app"],
+  },
+  "include": ["components", "typings"],
+  "exclude": ["node_modules"]
+}

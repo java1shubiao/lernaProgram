@@ -1,0 +1,80 @@
+{
+  "name": "e_uni_monorepo_fe",
+  "private": true,
+  "scripts": {
+    "dev": "yarn run clean:build && yarn run bootstrap",
+    "bootstrap": "lerna bootstrap --nohoist 'uni-*' --ignore 'uni-*'",
+    "build": "yarn clean:build && yarn build:stream",
+    "build:stream": "lerna run build --stream --ignore @xiaoe-*",
+    "build:modules": "yarn clean:build && lerna run build --stream --ignore e_*",
+    "changed": "lerna changed",
+    "clean": "lerna clean && rm -rf node_modules",
+    "clean:build": "lerna run clean",
+    "create": "lerna create",
+    "lint": "eslint --ext .js,.vue",
+    "publish:package": "lerna version --no-private --force-publish --yes && lerna publish from-package",
+    "test": "lerna run test",
+    "import": "lerna import",
+    "prepare": "husky install",
+    "lint:lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.5",
+    "eslint": "^8.10.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-define-config": "1.0.9",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "stylelint": "^13.9.0",
+    "lerna": "^3.22.1",
+    "prettier": "^2.0.5"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.5.2",
+    "node-sass": "^7.0.1"
+  },
+  "workspaces": {
+    "packages": [
+      "modules/*",
+      "components/packages",
+      "mp/*",
+      "components",
+      "modules/nui-goods-fe/packages"
+    ],
+    "nohoist": [
+      "**/@xiaoe/**",
+      "**/@dcloudio/**",
+      "**/gulp",
+      "**/gulp-*",
+      "**/vuepress",
+      "**/vuepress-*",
+      "**/minimist",
+      "**/dart-sass",
+      "**/browser-sync",
+      "**/vuex",
+      "**/postcss-comment",
+      "**/vue",
+      "**/axios-miniprogram",
+      "**/lodash*",
+      "**/async-validator",
+      "**/patch-package",
+      "**/@vue"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,vue}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "git add"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "packages": [
+    "modules/*",
+    "components/packages",
+    "mp/*",
+    "components",
+    "modules/nui-goods-fe/packages"
+  ],
+  "version": "independent",
+  "command": {
+    "create": {
+      "homepage": "https://talkcheap.xiaoeknow.com/helpstudy/e_uni_monorepo_fe",
+      "license": "MIT",
+      "registry": "http://111.230.199.61:6999/package/"
+    },
+    "publish": {
+      "ignoreChanges": ["ignored-file", "*.md", "mp/*", "components", "modules/nui-goods-fe/packages"],
+      "message": "chore(release): publish",
+      "registry": "http://111.230.199.61:6999/package/"
+    },
+    "bootstrap": {
+      "ignore": ["e_*", "channels-*"],
+      "npmClientArgs": ["--no-package-lock"]
+    },
+    "version": {
+      "allowBranch": [
+        "master",
+        "release/*",
+        "develop",
+        "feature/*"
+      ]
+    }
+  },
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}

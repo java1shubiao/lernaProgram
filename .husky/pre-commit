@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+#修复sourcetree提交代码husky报
+PATH=$PATH:/usr/local/bin:/usr/local/sbin
+
+npm run lint:lint-staged

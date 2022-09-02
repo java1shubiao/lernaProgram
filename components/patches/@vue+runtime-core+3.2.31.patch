@@ -1,0 +1,13 @@
+diff --git a/node_modules/@vue/runtime-core/dist/runtime-core.d.ts b/node_modules/@vue/runtime-core/dist/runtime-core.d.ts
+index 2632106..374ae49 100644
+--- a/node_modules/@vue/runtime-core/dist/runtime-core.d.ts
++++ b/node_modules/@vue/runtime-core/dist/runtime-core.d.ts
+@@ -1361,7 +1361,7 @@ declare type PropsWithDefaults<Base, Defaults> = Base & {
+ 
+ export declare type PropType<T> = PropConstructor<T> | PropConstructor<T>[];
+ 
+-export declare function provide<T>(key: InjectionKey<T> | string | number, value: T): void;
++export declare function provide<T>(key: InjectionKey<T> | string | number, value: T, isProvideRoot?: boolean): void;
+ 
+ export { proxyRefs }
+ 

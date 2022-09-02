@@ -1,0 +1,15 @@
+.xe-form-item-label.xe-label-required:not(.xe-label-required-mark-optional):before {
+  display: inline-block;
+  margin-right: 8rpx;
+  color: #ff4d4f;
+  font-size: 28rpx;
+  line-height: 1;
+  content: "*";
+}
+
+.xe-form-item-label:not(.xe-label-no-colon):after {
+  content: ":";
+  position: relative;
+  top: -0.5rpx;
+  margin: 0 16rpx 0 4rpx;
+}

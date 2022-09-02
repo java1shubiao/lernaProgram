@@ -1,0 +1,14 @@
+[submodule "mp/e_dy_fe"]
+	path = mp/e_dy_fe
+	url = http://talkcheap.xiaoeknow.com/helpstudy/e_dy_fe.git
+	ignore = all
+
+[submodule "mp/channels-centralized-applet"]
+	path = mp/channels-centralized-applet
+	url = http://talkcheap.xiaoeknow.com/XiaoeFE/channels-centralized-applet.git
+	ignore = all
+
+[submodule "modules/nui-goods-fe"]
+	path = modules/nui-goods-fe
+	url = http://talkcheap.xiaoeknow.com/ecommercefe/nui-goods-fe.git
+	ignore = all
